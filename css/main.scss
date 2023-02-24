@@ -1,0 +1,83 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+//
+// Main sass file, to import all styles
+//
+
+@charset "utf-8";
+
+$spacing-unit:     30px;
+$super-search:     rgba(0, 191, 255, 0.85);
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "post",
+        "search"
+;
+
+body {
+        background-color: #cecece;
+}
+
+.site-title {
+        align-self: center;
+        color: rgb(255,110,64);
+}
+
+.mdl-layout__drawer-button {
+        color: white;
+}
+
+.mdl-title-grid {
+        background-image: url('../img/redstone.jpg');
+        background-position: center;
+        background-size: cover;
+        margin: 0px;
+        height: 40em;
+        padding-top: 10em !important; 
+}
+
+.site-title {
+        text-align: center;
+        color: white;
+}
+
+
+.site-title > i {
+        margin-left: 0.5em;
+        font-size: 0.75em;
+}
+
+.post-ribbon {
+        background-image: url("../img/redstone.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.margin-right-2 {
+        margin-right: 0.2em;
+}
+
+.qr-code-image {
+        padding: 0.5em;
+}
+
+td > span > i {
+        color: #757575;
+        font-size: x-small;
+        vertical-align: bottom;
+        margin-right: 0.5em;
+}
+
+.emoji {
+        width: 1.5rem !important;
+        height: auto !important;
+} 

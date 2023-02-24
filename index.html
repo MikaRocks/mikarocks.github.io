@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="mdl-grid mdl-grid--no-spacing	mdl-title-grid mdl-shadow--4dp">
+  <div class="mdl-cell--12-col">
+    <h2 class="site-title mdl-cell--hide-tablet mdl-cell--hide-phone">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h2>
+    <h3 class="site-title mdl-cell--hide-desktop mdl-cell--hide-phone">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h3>
+    <h4 class="site-title mdl-cell--hide-desktop mdl-cell--hide-tablet">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h4>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="mdl-grid">
+
+    {% for post in site.posts %}
+
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+      <div class="mdl-card__title" {% if post.image %} style="background: url('{{ post.image }}') center/cover;" {% endif %}>
+        <h2 class="mdl-card__title-text">{{ post.title }}</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.baseurl }}">
+          <i class="material-icons margin-right-2">north_east</i> Details
+        </a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+</div>
