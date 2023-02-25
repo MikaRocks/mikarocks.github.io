@@ -11,4 +11,4 @@ weight: 113g
 color: "bräunlich, grau bis leicht bläulich"
 ---
 
-Ein Geschenk von meinem Opa. Der Stein aht eine schöne hell bis dunkelbraune Färbung, die Kristalle sind grau bis leicht bläulich.
+Ein Geschenk von meinem Opa. Der Stein hat eine schöne hell bis dunkelbraune Färbung, die Kristalle sind grau bis leicht bläulich.
