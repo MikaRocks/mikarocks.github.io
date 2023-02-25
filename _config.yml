@@ -24,5 +24,7 @@ more_vert:
 # Build settings
 markdown: kramdown
 
+permalink: /:categories/:title
+
 plugins:
   - jemoji
