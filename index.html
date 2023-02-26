@@ -1,16 +1,48 @@
 ---
 layout: default
+welcome: Willkommen
+icons: "<i class='material-icons'>landscape</i>"
 ---
 
 <div class="mdl-grid mdl-grid--no-spacing	mdl-title-grid mdl-shadow--4dp">
   <div class="mdl-cell--12-col">
-    <h2 class="site-title mdl-cell--hide-tablet mdl-cell--hide-phone">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h2>
-    <h3 class="site-title mdl-cell--hide-desktop mdl-cell--hide-phone">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h3>
-    <h4 class="site-title mdl-cell--hide-desktop mdl-cell--hide-tablet">Willkommen bei {{ site.title }}<i class="material-icons">rocket_launch</i></h4>
+    <h2 class="site-title mdl-cell--hide-tablet mdl-cell--hide-phone">{{ page.icons }} {{ page.welcome }} {{ page.icons }}</h2>
+    <h3 class="site-title mdl-cell--hide-desktop mdl-cell--hide-phone">{{ page.icons }} {{ page.welcome }} {{ page.icons }}</h3>
+    <h4 class="site-title mdl-cell--hide-desktop mdl-cell--hide-tablet">{{ page.icons }} {{ page.welcome }} {{ page.icons }}</h4>
   </div>
 </div>
 
 <div class="page-content">
+
+  <div class="mdl-grid categories-grid">
+    <!-- desktop + tablet -->
+    <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
+      <div class="categories-number-large">{{ site.categories['Minerale'].size }}</div>
+    </div>
+    <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
+      <div class="categories-number-large">{{ site.categories['Fossilien'].size }}</div>
+    </div>
+    <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
+      <h3><i class="material-icons-outlined">diamond</i> Minerale</h3>
+    </div>  
+    <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
+      <h3><i class="material-icons">pets</i> Fossilien</h3>
+    </div>
+    <!-- mobile -->
+    <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
+      <div class="categories-number-small">{{ site.categories['Minerale'].size }}</div>
+    </div>
+    <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
+      <i class="material-icons-outlined">diamond</i> Minerale
+    </div> 
+    <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
+      <div class="categories-number-small">{{ site.categories['Fossilien'].size }}</div>
+    </div>
+    <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
+      <i class="material-icons">pets</i> Fossilien
+    </div>
+  </div>
+
   <div class="mdl-grid">
 
     {% for post in site.posts %}

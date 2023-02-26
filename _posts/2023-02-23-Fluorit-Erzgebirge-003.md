@@ -1,8 +1,8 @@
 ---
 layout: post-rocks
-title:  Fluorit 2022
-date:   2022-01-03
-categories: Minerals
+permalink: /:slug
+title:  Fluorit Erzgebirge
+categories: Minerale
 author: Mika
 image: "img/rocks/003-1.jpg"
 gallery: [ "003-1.jpg", "003-2.jpg" ]
