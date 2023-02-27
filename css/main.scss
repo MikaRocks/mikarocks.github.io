@@ -49,6 +49,17 @@ body {
         background-color: white
 }
 
+.mdl-list__thumbnail {
+        width: 64px;
+        height: 64px;
+        margin-right: 1em;
+        border-radius: 10px;
+}
+
+.mdl-list__categories {
+        color: white;
+}
+
 .flex-container {
         display: flex;
         align-items: center;
@@ -102,10 +113,14 @@ td > span > i {
 }
 
 .categories-number-large {
-        margin-top: 0.5em;
+        margin: 0.5em 0 0.5em 0;
         font-size: 3.5em;
 }
 .categories-number-small {
         margin: 0.5em 0 0.5em 0;
         font-size: 2.5em;
+}
+
+.z-index-1 {
+        z-index: 1;
 }

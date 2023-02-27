@@ -1,0 +1,35 @@
+---
+layout: default
+title: Fossilien
+icon: pets
+---
+
+<div class="mdl-grid mdl-grid--no-spacing mdl-title-grid mdl-shadow--4dp">
+    <div class="mdl-cell--12-col">
+        <h2 class="site-title mdl-cell--hide-tablet mdl-cell--hide-phone"><i class='material-icons'>{{ page.icon }}</i> {{ page.title }}</h2>
+        <h3 class="site-title mdl-cell--hide-desktop mdl-cell--hide-phone"><i class='material-icons'>{{ page.icon }}</i> {{ page.title }}</h3>
+        <h4 class="site-title mdl-cell--hide-desktop mdl-cell--hide-tablet"><i class='material-icons'>{{ page.icon }}</i> {{ page.title }}</h4>
+    </div>
+</div>
+
+<div class="page-content">
+
+    <ul class="demo-list-icon mdl-list">
+        {% for post in site.posts %}
+        {% if post.categories contains page.title %}
+        <li class="mdl-list__item mdl-list__categories">
+            <a class="z-index-1" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="mdl-list__thumbnail mdl-shadow--4dp" style="background: url('{{ site.url }}/{{ post.image }}') center/cover;"></div>
+            </a>
+            <span class="mdl-list__item-primary-content">
+                {{ post.title }}
+            </span>
+            <a class="mdl-button mdl-button--accent mdl-button--colored mdl-list__item-secondary-action" href="{{ post.url | prepend: site.baseurl }}">
+                <i class="material-icons">north_east</i>
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+</div>

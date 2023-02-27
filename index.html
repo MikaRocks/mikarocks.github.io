@@ -23,23 +23,35 @@ icons: "<i class='material-icons'>landscape</i>"
       <div class="categories-number-large">{{ site.categories['Fossilien'].size }}</div>
     </div>
     <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
-      <h3><i class="material-icons-outlined">diamond</i> Minerale</h3>
-    </div>  
+      <a class="mdl-button mdl-js-button mdl-button--accent mdl-button--colored mdl-js-ripple-effect"
+         href="{{ 'minerale' | prepend: site.baseurl }}">
+        <i class="material-icons">diamond</i> Minerale
+      </a>
+    </div>
     <div class="mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone flex-container">
-      <h3><i class="material-icons">pets</i> Fossilien</h3>
+      <a class="mdl-button mdl-js-button mdl-button--accent mdl-button--colored mdl-js-ripple-effect"
+        href="{{ 'fossilien' | prepend: site.baseurl }}">
+       <i class="material-icons">pets</i> Fossilien
+     </a>
     </div>
     <!-- mobile -->
     <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
       <div class="categories-number-small">{{ site.categories['Minerale'].size }}</div>
     </div>
     <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
-      <i class="material-icons-outlined">diamond</i> Minerale
+      <a class="mdl-button mdl-js-button mdl-button--accent mdl-button--colored mdl-js-ripple-effect"
+        href="{{ 'minerale' | prepend: site.baseurl }}">
+       <i class="material-icons">diamond</i> Minerale
+      </a>
     </div> 
     <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
       <div class="categories-number-small">{{ site.categories['Fossilien'].size }}</div>
     </div>
     <div class="mdl-cell--2-col-phone mdl-cell--hide-desktop mdl-cell--hide-tablet flex-container">
-      <i class="material-icons">pets</i> Fossilien
+      <a class="mdl-button mdl-js-button mdl-button--accent mdl-button--colored mdl-js-ripple-effect"
+         href="{{ 'fossilien' | prepend: site.baseurl }}">
+        <i class="material-icons">pets</i> Fossilien
+      </a>
     </div>
   </div>
 
