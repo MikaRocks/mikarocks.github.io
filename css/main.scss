@@ -64,9 +64,15 @@ dialog::backdrop {
         background: rgba(0, 0, 0, 0.5);
 }
 
+.dialog--close-button {
+        position: absolute;
+        bottom: 1em;   
+}
+
 .show-modal-card {
         cursor: pointer;
 }
+
 .image-modal-dialog {
         width: 90%;
         height: 90%;

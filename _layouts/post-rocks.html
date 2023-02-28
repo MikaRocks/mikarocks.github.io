@@ -11,7 +11,7 @@ layout: default
       <div class="mdl-color-text--grey-500">
         {{ page.date | date: "%b %-d, %Y" }}
         {% if page.author %} • {{ page.author }} {% endif %}
-        {% if page.category %} • <a class="mdl-color-text--grey-500" href="{{ site.url }}/{{ page.category }}">{{
+        {% if page.category %} • <a class="mdl-color-text--grey-500" href="{{ site.url }}/{{ page.category | slugify }}">{{
           page.category }}</a> {% endif %}
       </div>
 
@@ -113,7 +113,7 @@ layout: default
           <dialog data-modal="{{ name | slugify }}" class="mdl-dialog image-modal-dialog"
             style="background: url('/img/rocks/{{ name }}') center / contain;">
             <div class="mdl-dialog__actions">
-              <button type="button" class="mdl-button mdl-button--accent close"><i
+              <button type="button" class="dialog--close-button mdl-button mdl-button--accent close"><i
                   class="material-icons margin-right-2">close</i>Zurück</button>
             </div>
           </dialog>
