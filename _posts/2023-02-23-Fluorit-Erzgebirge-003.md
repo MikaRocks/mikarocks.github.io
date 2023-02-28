@@ -2,7 +2,7 @@
 layout: post-rocks
 permalink: /:slug
 title:  Fluorit Erzgebirge
-categories: Minerale
+category: Minerale
 author: Mika
 image: "img/rocks/003-1.jpg"
 gallery: [ "003-1.jpg", "003-2.jpg" ]

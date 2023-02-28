@@ -6,18 +6,22 @@ layout: default
 <main class="post-main mdl-layout__content">
   <div class="post-container mdl-grid">
     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="post-section mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+    <div
+      class="post-section mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
       <div class="mdl-color-text--grey-500">
-      {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}{% if page.categories %} • {% for cat in page.categories %} {{ cat }} {% endfor %} {% endif %}
+        {{ page.date | date: "%b %-d, %Y" }}
+        {% if page.author %} • {{ page.author }} {% endif %}
+        {% if page.category %} • <a class="mdl-color-text--grey-500" href="{{ site.url }}/{{ page.category }}">{{
+          page.category }}</a> {% endif %}
       </div>
 
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--9-col-desktop">
-            <h3>{{ page.title }}</h3>
+          <h3>{{ page.title }}</h3>
         </div>
         <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone">
-            <img class="mdl-shadow--3dp qr-code-image"
-                 src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data={{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+          <img class="mdl-shadow--3dp qr-code-image"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data={{ site.url }}{{ site.baseurl }}{{ page.url }}" />
         </div>
       </div>
 
@@ -41,16 +45,16 @@ layout: default
             {% if page.weight %}
             <li class="mdl-list__item">
               <span class="mdl-list__item-primary-content">
-              <i class="material-icons mdl-list__item-icon">scale</i>
-              {{ page.weight }}
+                <i class="material-icons mdl-list__item-icon">scale</i>
+                {{ page.weight }}
               </span>
             </li>
             {% endif %}
             {% if page.color %}
             <li class="mdl-list__item">
               <span class="mdl-list__item-primary-content">
-              <i class="material-icons mdl-list__item-icon">brush</i>
-              {{ page.color }}
+                <i class="material-icons mdl-list__item-icon">brush</i>
+                {{ page.color }}
               </span>
             </li>
             {% endif %}
@@ -59,55 +63,65 @@ layout: default
         </div>
 
         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell--hide-tablet mdl-cell--hide-phone">
-            <thead>
-              <tr>
-                <th colspan="3" class="mdl-data-table__cell--non-numeric">Eigenschaften</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% if page.location %}
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric">
-                    <i class="material-icons">place</i>    
-                </td>
-                <td class="mdl-data-table__cell--non-numeric">Fundort</td>
-                <td>{{ page.location }}</td>
-              </tr>
-              {% endif %}
-              {% if page.weight %}
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric">
-                    <i class="material-icons">scale</i>    
-                </td>
-                <td class="mdl-data-table__cell--non-numeric">Gewicht</td>
-                <td>{{ page.weight }}</td>
-              </tr>
-              {% endif %}
-              {% if page.color %}
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric">
-                    <i class="material-icons">brush</i>    
-                </td>
-                <td class="mdl-data-table__cell--non-numeric">Färbung</td>
-                <td>{{ page.color }}</td>
-              </tr>
-              {% endif %}
-            </tbody>
-          </table>
+          <thead>
+            <tr>
+              <th colspan="3" class="mdl-data-table__cell--non-numeric">Eigenschaften</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if page.location %}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">
+                <i class="material-icons">place</i>
+              </td>
+              <td class="mdl-data-table__cell--non-numeric">Fundort</td>
+              <td>{{ page.location }}</td>
+            </tr>
+            {% endif %}
+            {% if page.weight %}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">
+                <i class="material-icons">scale</i>
+              </td>
+              <td class="mdl-data-table__cell--non-numeric">Gewicht</td>
+              <td>{{ page.weight }}</td>
+            </tr>
+            {% endif %}
+            {% if page.color %}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">
+                <i class="material-icons">brush</i>
+              </td>
+              <td class="mdl-data-table__cell--non-numeric">Färbung</td>
+              <td>{{ page.color }}</td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
 
         {% if page.gallery %}
 
         <div class="mdl-grid">
-        
-        {% for name in page.gallery %}
 
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-            <div class="mdl-card mdl-shadow--3dp" style="background: url('/img/rocks/{{ name }}') center / cover; width:100%; height: 20em;"></div>
+          {% for name in page.gallery %}
+
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div data-modal="{{ name | slugify }}" class="show-modal-card mdl-card mdl-shadow--3dp"
+              style="background: url('/img/rocks/{{ name }}') center / cover; width:100%; height: 20em;"></div>
+          </div>
+
+          <dialog data-modal="{{ name | slugify }}" class="mdl-dialog image-modal-dialog"
+            style="background: url('/img/rocks/{{ name }}') center / contain;">
+            <div class="mdl-dialog__actions">
+              <button type="button" class="mdl-button mdl-button--accent close"><i
+                  class="material-icons margin-right-2">close</i>Zurück</button>
+            </div>
+          </dialog>
+
+          {% endfor %}
+
         </div>
-        {% endfor %}
-        
-        </div>
-        
+
         {% endif %}
 
       </article>

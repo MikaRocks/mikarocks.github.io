@@ -60,6 +60,20 @@ body {
         color: white;
 }
 
+dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+}
+
+.show-modal-card {
+        cursor: pointer;
+}
+.image-modal-dialog {
+        width: 90%;
+        height: 90%;
+        background-repeat: no-repeat !important;
+        background-color:#2a2a2a !important; 
+}
+
 .flex-container {
         display: flex;
         align-items: center;

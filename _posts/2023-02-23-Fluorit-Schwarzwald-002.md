@@ -2,7 +2,7 @@
 layout: post-rocks
 permalink: /:slug
 title:  Fluorit Schwarzwald
-categories: Minerale
+category: Minerale
 author: Mika
 image: "img/rocks/002-1.jpg"
 gallery: [ "002-1.jpg", "002-2.jpg", "002-3.jpg" ]

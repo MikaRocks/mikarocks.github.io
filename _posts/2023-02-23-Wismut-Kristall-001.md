@@ -2,7 +2,7 @@
 layout: post-rocks
 permalink: /:slug
 title:  Wismut Kristall
-categories: Minerale
+category: Minerale
 author: Mika
 image: "img/rocks/001-1.jpg"
 gallery: [ "001-1.jpg", "001-2.jpg", "001-3.jpg" ]

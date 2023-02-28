@@ -1,7 +1,7 @@
 ---
 layout: post-rocks
 title:  Quarz Mittelsachsen
-categories: Minerale
+category: Minerale
 author: Mika
 image: "img/rocks/005-2.jpg"
 gallery: [ "005-1.jpg", "005-2.jpg" ]
