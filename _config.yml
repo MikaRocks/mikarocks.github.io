@@ -29,4 +29,8 @@ permalink: /:categories/:title
 exclude: [ "CHANGELOG.md" ]
 
 plugins:
-  - jemoji
+  # - jekyll-sidemap
+  # - jekyll-feed
+  # - jekyll-seo-tag
+  # - jekyll-paginate
+  # - jemoji
